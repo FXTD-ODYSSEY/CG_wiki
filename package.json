@@ -1,0 +1,19 @@
+{
+  "name": "cg_wiki",
+  "version": "1.0.0",
+  "description": "My wiki website",
+  "main": "index.js",
+  "scripts": {
+    "push": "git push "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FXTD-ODYSSEY/CG_wiki.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FXTD-ODYSSEY/CG_wiki/issues"
+  },
+  "homepage": "https://github.com/FXTD-ODYSSEY/CG_wiki#readme"
+}
