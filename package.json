@@ -4,7 +4,7 @@
   "description": "My wiki website",
   "main": "index.js",
   "scripts": {
-    "push": "git push "
+    "push": "git push origin gh-pages & git push remote gh-pages"
   },
   "repository": {
     "type": "git",

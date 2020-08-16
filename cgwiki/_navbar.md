@@ -5,7 +5,6 @@
   - Maya
   - Python
   - Houdini
-- [术语列表](/_glossary)
 - [我的博客](https://blog.l0v0.com/)
 <!-- - 语言切换
   - [中文](/)

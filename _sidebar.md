@@ -1,2 +1,1 @@
-- Getting started
-  - [Quick start](quickstart.md)
+- [术语列表](_glossary.md)
