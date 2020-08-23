@@ -1,21 +1,21 @@
 # Unreal-PyToolkit
 
-> 嵌入 Python PySide 模块进行界面开发
+> 嵌入 Python PySide 模块进行界面开发    
 
 ![启动菜单](./img/01.png)
 
 ![工具集锦](./img/02.png)
 
-> &emsp;&emsp;工具界面使用 PySide 组件库 [dayu_widgets](https://github.com/phenom-films/dayu_widgets) 
-> &emsp;&emsp;插件在 4.25.1 下运行没有问题。    
+> &emsp;&emsp;工具界面使用 PySide 组件库 [dayu_widgets](https://github.com/phenom-films/dayu_widgets)     
+> &emsp;&emsp;插件在 4.25.1 下运行没有问题。        
 
-> &emsp;&emsp;使用本插件需要开启下列 Unreal 官方插件
-> + Python Editor Script Plugin 
-> + Editor Scripting Utilities
-> + Sequencer Scripting
+> &emsp;&emsp;使用本插件需要开启下列 Unreal 官方插件    
+> + Python Editor Script Plugin     
+> + Editor Scripting Utilities    
+> + Sequencer Scripting    
 
-> &emsp;&emsp;由于 Unreal Python 的官方插件是基于蓝图节点转换到 Python 调用的
-> &emsp;&emsp;所以不开启插件会导致相关的蓝图模块缺失，官方 Python 文档里面所提到的一些模块也将无法使用。
+> &emsp;&emsp;由于 Unreal Python 的官方插件是基于蓝图节点转换到 Python 调用的    
+> &emsp;&emsp;所以不开启插件会导致相关的蓝图模块缺失，官方 Python 文档里面所提到的一些模块也将无法使用。    
 
 ## Python 依赖
 
@@ -30,18 +30,18 @@ Python 目录里面添加的依赖库如下:
 
 ## 插件配置
 
-> &emsp;&emsp;插件参考官方 Python 插件的 Startup 脚本启动方案，自动执行 Content 目录下的 initialize.py 脚本    
-> &emsp;&emsp;initialize.py 脚本在 Unreal 里面初始化 Qt 的运行环境。    
+> &emsp;&emsp;插件参考官方 Python 插件的 Startup 脚本启动方案，自动执行 Content 目录下的 initialize.py 脚本        
+> &emsp;&emsp;initialize.py 脚本在 Unreal 里面初始化 Qt 的运行环境。        
 
-> &emsp;&emsp;读取 Content 目录下的 menu.json 配置生成 Unreal 菜单    
-> &emsp;&emsp;读取 Content 目录下的 main.css  作为样式补充    
+> &emsp;&emsp;读取 Content 目录下的 menu.json 配置生成 Unreal 菜单        
+> &emsp;&emsp;读取 Content 目录下的 main.css  作为样式补充        
 
-> &emsp;&emsp;重载 QWidget 的 show 方法，实现窗口唯一、Unreal窗口嵌入 以及 dayu_widgets 的样式配置。    
-> &emsp;&emsp;如果想要 Qt 原生样式可以使用 `setVisible(True)` 的方法    
+> &emsp;&emsp;重载 QWidget 的 show 方法，实现窗口唯一、Unreal窗口嵌入 以及 dayu_widgets 的样式配置。        
+> &emsp;&emsp;如果想要 Qt 原生样式可以使用 `setVisible(True)` 的方法        
 
 ## 菜单启动
 
-> &emsp;&emsp;menu.json 配置命令行执行相应工具的启动脚本。    
+> &emsp;&emsp;menu.json 配置命令行执行相应工具的启动脚本。        
 
     section - 配置分组
 
@@ -99,12 +99,12 @@ Python 目录里面添加的依赖库如下:
 
 ### 动画导入比较面板
 
-> [说明文档链接](https://blog.l0v0.com/posts/a999f0c.html)    
+> [说明文档链接](https://blog.l0v0.com/posts/a999f0c.html)        
 
 ### 批量渲染 Sequencer 工具
 
-> &emsp;&emsp;有待更新    
+> &emsp;&emsp;有待更新        
 
 ### 骨骼 Socket 自动化工具
 
-> &emsp;&emsp;选择 SkeletalMesh 自动根据配置的骨骼添加 Socket    
+> &emsp;&emsp;选择 SkeletalMesh 自动根据配置的骨骼添加 Socket        

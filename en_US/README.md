@@ -1,6 +1,6 @@
 ## en_US docsify
 
-> A magical documentation site generator.
+> A magical documentation site generator.    
 
 ## What it is
 

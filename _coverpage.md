@@ -2,7 +2,7 @@
 
 # docsify <small>4.11.4</small>
 
-> A magical documentation site generator.
+> A magical documentation site generator.    
 
 - Simple and lightweight
 - No statically built html files
