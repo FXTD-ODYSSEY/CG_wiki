@@ -32,7 +32,8 @@ function plugin(hook, vm) {
             str = wordsCount + " 字"
             readTime = Math.ceil(wordsCount / 400) + " 分钟"
         }
-        let url = 'https://github.com/FXTD-ODYSSEY/CG_wiki/edit/gh-pages/' + vm.route.file
+
+        let url = 'https://github.com/FXTD-ODYSSEY/CG_wiki/edit/gh-pages' + window.location.pathname + vm.route.file
 
         //add html string
         next(
