@@ -1,12 +1,21 @@
 # Unreal-PyToolkit
 
-嵌入 Python PySide 模块进行界面开发
+> 嵌入 Python PySide 模块进行界面开发
 
 ![启动菜单](./img/01.png)
 
 ![工具集锦](./img/02.png)
 
+> &emsp;&emsp;工具界面使用 PySide 组件库 [dayu_widgets](https://github.com/phenom-films/dayu_widgets) 
 > &emsp;&emsp;插件在 4.25.1 下运行没有问题。    
+
+> &emsp;&emsp;使用本插件需要开启下列 Unreal 官方插件
+> + Python Editor Script Plugin 
+> + Editor Scripting Utilities
+> + Sequencer Scripting
+
+> &emsp;&emsp;由于 Unreal Python 的官方插件是基于蓝图节点转换到 Python 调用的
+> &emsp;&emsp;所以不开启插件会导致相关的蓝图模块缺失，官方 Python 文档里面所提到的一些模块也将无法使用。
 
 ## Python 依赖
 

@@ -38,25 +38,34 @@ function plugin(hook, vm) {
         //add html string
         next(
             `
-      ${defaultOptions.position === "bottom" ? html : ""}
-      <div style="margin-${defaultOptions.position ? "bottom" : "top"}: ${
+            ${defaultOptions.position === "bottom" ? html : ""}
+            <div style="margin-${defaultOptions.position ? "bottom" : "top"}: ${
             defaultOptions.margin
             };">
-          <a href="${url}" target="_blank" rel="noopener" style="margin:20px 20px">
-          <img class="emoji" src="https://github.githubassets.com/images/icons/emoji/memo.png" alt="memo">
-          线上编辑</a>
-          <span style="
-                float: ${defaultOptions.float === "right" ? "right" : "left"};
-                font-size: ${defaultOptions.fontsize};
-                color:${defaultOptions.color};">
-          ${str}
-          ${defaultOptions.isExpected ? `&nbsp; | &nbsp;${readTime}` : ""}
-          </span>
-          <div style="clear: both"></div>
-      </div>
-      ${defaultOptions.position !== "bottom" ? html : ""}
-      `
+                <a href="${url}" target="_blank" rel="noopener" style="margin:20px 20px">
+                <img class="emoji" src="https://github.githubassets.com/images/icons/emoji/memo.png" alt="memo">
+                线上编辑</a>
+                <span style="
+                        float: ${defaultOptions.float === "right" ? "right" : "left"};
+                        font-size: ${defaultOptions.fontsize};
+                        color:${defaultOptions.color};">
+                ${str}
+                ${defaultOptions.isExpected ? `&nbsp; | &nbsp;${readTime}` : ""}
+                </span>
+                <div style="clear: both"></div>
+            </div>
+            ${defaultOptions.position !== "bottom" ? html : ""}
+            `
         )
+    })
+    hook.ready(() => {
+        links = document.getElementsByClassName('GITHUB_FIX')
+        website = window.location.origin
+        if (website.includes("github"))
+            for (var i = 0; i < links.length; i++) {
+                link = links[i]
+                link.href = link.href.replace(website, "/CG_wiki")
+            }
     })
 }
 

@@ -72,6 +72,10 @@
       alias: {
         '/.*/_navbar.md': '/_navbar.md',
       },
+      requestHeaders: {
+        // 避免访问了旧的资源没有更新
+        'cache-control': 'max-age=600',
+      },
       auto2top: true,
       coverpage: false,
       executeScript: true,
@@ -85,6 +89,7 @@
       //   host: '//matomo.thunderwave.de',
       //   id: 6
       // },
+      repo:"https://github.com/FXTD-ODYSSEY/Unreal-PyToolkit",
       name: 'PyToolkit 文档',
       search: {
         maxAge: 86400000,
@@ -98,20 +103,7 @@
           '/': '搜索'
         }
       },
-      plugins: [
-        function (hook, vm) {
-          hook.ready(() => {
-            links = document.getElementsByClassName('GITHUB_FIX')
-            console.log(links)
-            website = window.location.origin
-            if (website.includes("github"))
-              for (var i = 0; i < links.length; i++) {
-                link = links[i]
-                link.href = link.href.replace(website, "/CG_wiki")
-              }
-          })
-        }
-      ]
+      plugins: []
     }
   </script>
 
