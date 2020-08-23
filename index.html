@@ -31,6 +31,7 @@
 <body>
   <div id="app">Loading ...</div>
   <script>
+    const hostname = window.location.hostname
     window.$docsify = {
       Valine: {
         appId: 'mrRioyNTSEAOvVLAsLgkhr4j-gzGzoHsz',
@@ -76,11 +77,12 @@
 
 
       alias: {
+        '/CG_wiki/(.*)': './$1',
         '/.*/_navbar.md': '/_navbar.md',
         '/en_US/(.*)': './en_US/$1',
         '/programing/(.*)': './programing/$1',
         '/cgwiki/(.*)': './cgwiki/$1',
-        // '/PyToolkit/(.*)': './PyToolkit/$1',
+        // '/PyToolkit/': 'CG_wiki/PyToolkit/',
       },
       auto2top: true,
       coverpage: false,
@@ -88,8 +90,11 @@
       loadSidebar: true,
       loadNavbar: true,
       mergeNavbar: true,
+      relativePath: true,
       maxLevel: 5,
       subMaxLevel: 6,
+      noCompileLinks: [],
+      // basePath:"https://docsify.js.org/",
       // ga: 'UA-106147152-1',
       // matomo: {
       //   host: '//matomo.thunderwave.de',
@@ -109,6 +114,18 @@
         }
       },
       plugins: [
+        function (hook, vm) {
+          hook.ready(() => {
+            links = document.getElementsByClassName('GITHUB_FIX')
+            console.log(links)
+            website = window.location.origin
+            if (website.includes("github"))
+              for (var i = 0; i < links.length; i++) {
+                link = links[i]
+                link.href = link.href.replace(website, "/CG_wiki")
+              }
+          })
+        }
       ]
     }
   </script>
@@ -122,6 +139,7 @@
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-markdown.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-nginx.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-php.min.js"></script>
 

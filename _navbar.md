@@ -1,5 +1,6 @@
 - Unreal
-  - <a href="/PyToolkit">PyToolkit 插件文档</a>
+  - <a class="GITHUB_FIX" href="/PyToolkit">PyToolkit 插件文档</a>
+  <!-- - [PyToolkit 插件文档](/PyToolkit/) -->
 - 翻译
   - [编程规范](/programing/)
   - [cgwiki](/cgwiki/)

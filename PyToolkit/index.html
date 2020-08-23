@@ -71,12 +71,6 @@
       },
       alias: {
         '/.*/_navbar.md': '/_navbar.md',
-        '/home': () => {
-          if(home)
-            window.open(window.location.origin)
-          else
-            home = true;
-        },
       },
       auto2top: true,
       coverpage: false,
@@ -105,6 +99,18 @@
         }
       },
       plugins: [
+        function (hook, vm) {
+          hook.ready(() => {
+            links = document.getElementsByClassName('GITHUB_FIX')
+            console.log(links)
+            website = window.location.origin
+            if (website.includes("github"))
+              for (var i = 0; i < links.length; i++) {
+                link = links[i]
+                link.href = link.href.replace(website, "/CG_wiki")
+              }
+          })
+        }
       ]
     }
   </script>
