@@ -15,7 +15,7 @@
 
 <video src="//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/PyToolkit/_img/msic/01/02.mp4" autoplay="autoplay" loop="loop" style="width: 100%; height:100%;"></video>
 
-> &emsp;&emsp;使用下来菜单启动，或者使用在主窗口使用快捷键 Ctrl + F 唤起。    
+> &emsp;&emsp;使用下拉菜单启动，或者使用在主窗口使用快捷键 Ctrl + F 唤起。    
 
 ![界面](//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/PyToolkit/_img/msic/01/03.png)
 

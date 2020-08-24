@@ -62,9 +62,17 @@
 > &emsp;&emsp;序号可以通过上下移动调整序号的号码    
 > &emsp;&emsp;文件序号可以通过左侧选项面板进行调整。    
 
+> &emsp;&emsp;也可以通过拖拽选择项进行调整。
+
 > &emsp;&emsp;下面的变量配置可以直接进行调用    
 > &emsp;&emsp;会自动替换为记录的变量值    
 > &emsp;&emsp;替换也可以使用变量值    
 
 <video src="//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/PyToolkit/_img/msic/02/10.mp4" autoplay="autoplay" loop="loop" style="width: 100%; height:100%;"></video>
 
+
+## 配置保存&读取
+
+<video src="//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/PyToolkit/_img/msic/02/11.mp4" autoplay="autoplay" loop="loop" style="width: 100%; height:100%;"></video>
+
+> &emsp;&emsp;配置支持导入导出，方便制作替换模板。
