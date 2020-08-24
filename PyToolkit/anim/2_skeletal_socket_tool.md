@@ -9,7 +9,7 @@
 > + get_skeleton_bone_num    
 > + get_skeleton_bone_name    
 
-![警告](//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/PyToolkit/_img/anim/01/00.png)
+![警告](//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/PyToolkit/_img/anim/02/00.png)
 
 ## 工具开启
 
@@ -40,7 +40,7 @@
 
 ## 骨骼找不到弹窗警告
 
-![警告](//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/PyToolkit/_img/anim/01/05.png)
+![警告](//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/PyToolkit/_img/anim/02/05.png)
 
 > &emsp;&emsp;如果角色上没有匹配的骨骼名称就会太过骨骼并且最后弹出警告。    
 
