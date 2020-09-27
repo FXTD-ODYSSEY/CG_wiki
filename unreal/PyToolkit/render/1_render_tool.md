@@ -6,15 +6,15 @@
 
 > &emsp;&emsp;这个工具不需要用到 C++ 蓝图    
 
-![界面](//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/PyToolkit/_img/render/01/01.png)
+![界面](//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/unreal/PyToolkit/_img/render/01/01.png)
 
 ## 开启插件
 
-<video src="//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/PyToolkit/_img/render/01/02.mp4" autoplay="autoplay" loop="loop" style="width: 100%; height:100%;"></video>
+<video src="//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/unreal/PyToolkit/_img/render/01/02.mp4" autoplay="autoplay" loop="loop" style="width: 100%; height:100%;"></video>
 
 ## 拍屏演示
 
-<video src="//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/PyToolkit/_img/render/01/03.mp4" autoplay="autoplay" loop="loop" style="width: 100%; height:100%;"></video>
+<video src="//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/unreal/PyToolkit/_img/render/01/03.mp4" autoplay="autoplay" loop="loop" style="width: 100%; height:100%;"></video>
 
 > &emsp;&emsp;默认读取 Sequencer 里面的配置    
 > &emsp;&emsp;自动进行批量拍屏，拍屏完成之后自动打开输出目录。    
@@ -22,7 +22,7 @@
 
 ## 手动修改拍屏设置
 
-<video src="//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/PyToolkit/_img/render/01/04.mp4" autoplay="autoplay" loop="loop" style="width: 100%; height:100%;"></video>
+<video src="//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/unreal/PyToolkit/_img/render/01/04.mp4" autoplay="autoplay" loop="loop" style="width: 100%; height:100%;"></video>
 
 > &emsp;&emsp;除了输出目录 输出名称 输出格式 这些面板可以调节的参数外。    
 > &emsp;&emsp;其他参数均读取 配置路径 的 ini 文件获取。    

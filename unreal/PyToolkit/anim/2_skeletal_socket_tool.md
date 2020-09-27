@@ -9,15 +9,15 @@
 > + get_skeleton_bone_num    
 > + get_skeleton_bone_name    
 
-![警告](//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/PyToolkit/_img/anim/02/00.png)
+![警告](//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/unreal/PyToolkit/_img/anim/02/00.png)
 
 ## 工具开启
 
-<video src="//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/PyToolkit/_img/anim/02/01.mp4" autoplay="autoplay" loop="loop" style="width: 100%; height:100%;"></video>
+<video src="//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/unreal/PyToolkit/_img/anim/02/01.mp4" autoplay="autoplay" loop="loop" style="width: 100%; height:100%;"></video>
 
 ## 添加数据 生成 socket
 
-<video src="//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/PyToolkit/_img/anim/02/02.mp4" autoplay="autoplay" loop="loop" style="width: 100%; height:100%;"></video>
+<video src="//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/unreal/PyToolkit/_img/anim/02/02.mp4" autoplay="autoplay" loop="loop" style="width: 100%; height:100%;"></video>
 
 > &emsp;&emsp;右键添加一行数据，可以添加一行空数据    
 > &emsp;&emsp;然后选择 Skeletal Mesh 点击 自动生成Socket 即可添加配置的 socket    
@@ -25,14 +25,14 @@
 
 ## 读取 CSV 数据
 
-<video src="//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/PyToolkit/_img/anim/02/03.mp4" autoplay="autoplay" loop="loop" style="width: 100%; height:100%;"></video>
+<video src="//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/unreal/PyToolkit/_img/anim/02/03.mp4" autoplay="autoplay" loop="loop" style="width: 100%; height:100%;"></video>
 
 > &emsp;&emsp;可以通过 Excel 软件编辑输出 csv 文件    
 > &emsp;&emsp;然后通过工具读取 csv 文件    
 
 ## 修改并输出 csv 数据
 
-<video src="//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/PyToolkit/_img/anim/02/04.mp4" autoplay="autoplay" loop="loop" style="width: 100%; height:100%;"></video>
+<video src="//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/unreal/PyToolkit/_img/anim/02/04.mp4" autoplay="autoplay" loop="loop" style="width: 100%; height:100%;"></video>
 
 > &emsp;&emsp;可以通过双击插槽栏修改插槽的名称    
 > &emsp;&emsp;生成插槽的时候名称也会随之变化。    
@@ -40,7 +40,7 @@
 
 ## 骨骼找不到弹窗警告
 
-![警告](//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/PyToolkit/_img/anim/02/05.png)
+![警告](//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/unreal/PyToolkit/_img/anim/02/05.png)
 
 > &emsp;&emsp;如果角色上没有匹配的骨骼名称就会太过骨骼并且最后弹出警告。    
 

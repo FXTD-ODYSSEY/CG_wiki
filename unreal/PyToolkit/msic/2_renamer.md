@@ -4,18 +4,18 @@
 > &emsp;&emsp;最近看了个[教程](https://www.bilibili.com/video/BV1bT4y177v8)，有相关重命名和匹配的操作。     
 > &emsp;&emsp;于是就将功能通过 PySide 全部整合到一起了~    
 
-![界面](//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/PyToolkit/_img/msic/02/01.png)
+![界面](//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/unreal/PyToolkit/_img/msic/02/01.png)
 
 ## 启动插件
 
-<video src="//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/PyToolkit/_img/msic/02/02.mp4" autoplay="autoplay" loop="loop" style="width: 100%; height:100%;"></video>
+<video src="//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/unreal/PyToolkit/_img/msic/02/02.mp4" autoplay="autoplay" loop="loop" style="width: 100%; height:100%;"></video>
 
 > &emsp;&emsp;默认不会拉开左侧的选项配置界面。    
 > &emsp;&emsp;避免把美术人员吓着了，所以我将初始界面设计得比较简单。    
 
 ## 基础替换演示
 
-<video src="//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/PyToolkit/_img/msic/02/04.mp4" autoplay="autoplay" loop="loop" style="width: 100%; height:100%;"></video>
+<video src="//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/unreal/PyToolkit/_img/msic/02/04.mp4" autoplay="autoplay" loop="loop" style="width: 100%; height:100%;"></video>
 
 
 > &emsp;&emsp;添加当前选择的物体。    
@@ -24,23 +24,23 @@
 
 ## 图标说明
 
-![图标说明](//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/PyToolkit/_img/msic/02/03.png)
+![图标说明](//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/unreal/PyToolkit/_img/msic/02/03.png)
 
 > &emsp;&emsp;右键菜单也可以看到右侧图标对应的功能的说明    
 
-<video src="//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/PyToolkit/_img/msic/02/05.mp4" autoplay="autoplay" loop="loop" style="width: 100%; height:100%;"></video>
+<video src="//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/unreal/PyToolkit/_img/msic/02/05.mp4" autoplay="autoplay" loop="loop" style="width: 100%; height:100%;"></video>
 
 > &emsp;&emsp;功能基本上和右键菜单的说明对应    
 > &emsp;&emsp;右键菜单最上面可以将菜单变为一个向窗口，方便多次点击。    
 
 ## 进阶配置案例 - 根据文件类型添加前缀
 
-<video src="//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/PyToolkit/_img/msic/02/06.mp4" autoplay="autoplay" loop="loop" style="width: 100%; height:100%;"></video>
+<video src="//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/unreal/PyToolkit/_img/msic/02/06.mp4" autoplay="autoplay" loop="loop" style="width: 100%; height:100%;"></video>
 
 > &emsp;&emsp;自动根据文件类型添加虚幻类型缩写    
 > &emsp;&emsp;这个命名规则根据 github 的命名规范仓库来的 [地址](https://github.com/Allar/ue4-style-guide)    
 
-![图标说明](//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/PyToolkit/_img/msic/02/07.png)
+![图标说明](//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/unreal/PyToolkit/_img/msic/02/07.png)
 
 > &emsp;&emsp;可以在工具的帮助上找到链接    
 
@@ -50,14 +50,14 @@
 
 ## 进阶配置案例 - 正则表达式匹配
 
-<video src="//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/PyToolkit/_img/msic/02/08.mp4" autoplay="autoplay" loop="loop" style="width: 100%; height:100%;"></video>
+<video src="//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/unreal/PyToolkit/_img/msic/02/08.mp4" autoplay="autoplay" loop="loop" style="width: 100%; height:100%;"></video>
 
 > &emsp;&emsp;正则表达式通过特定标记符号规则实现复杂名称的匹配    
 > &emsp;&emsp;用好正则可以极大简化各种复杂的重命名操作 [正则表达式讲解](https://www.runoob.com/regexp/regexp-syntax.html)    
 
 ## 进阶配置案例 - 前缀添加序号
 
-<video src="//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/PyToolkit/_img/msic/02/09.mp4" autoplay="autoplay" loop="loop" style="width: 100%; height:100%;"></video>
+<video src="//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/unreal/PyToolkit/_img/msic/02/09.mp4" autoplay="autoplay" loop="loop" style="width: 100%; height:100%;"></video>
 
 > &emsp;&emsp;序号可以通过上下移动调整序号的号码    
 > &emsp;&emsp;文件序号可以通过左侧选项面板进行调整。    
@@ -68,11 +68,11 @@
 > &emsp;&emsp;会自动替换为记录的变量值    
 > &emsp;&emsp;替换也可以使用变量值    
 
-<video src="//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/PyToolkit/_img/msic/02/10.mp4" autoplay="autoplay" loop="loop" style="width: 100%; height:100%;"></video>
+<video src="//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/unreal/PyToolkit/_img/msic/02/10.mp4" autoplay="autoplay" loop="loop" style="width: 100%; height:100%;"></video>
 
 
 ## 配置保存&读取
 
-<video src="//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/PyToolkit/_img/msic/02/11.mp4" autoplay="autoplay" loop="loop" style="width: 100%; height:100%;"></video>
+<video src="//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/unreal/PyToolkit/_img/msic/02/11.mp4" autoplay="autoplay" loop="loop" style="width: 100%; height:100%;"></video>
 
 > &emsp;&emsp;配置支持导入导出，方便制作替换模板。
