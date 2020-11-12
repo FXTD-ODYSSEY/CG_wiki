@@ -1,7 +1,6 @@
 # Unreal-PyToolkit
 
 > 嵌入 Python PySide 模块实现 Qt 界面开发    
-> 说明文档链接 [wiki.l0v0.com/PyToolkit/](http://wiki.l0v0.com/PyToolkit/#/)
 
 ![工具集锦](//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/unreal/PyToolkit/_img/01.png)
 
