@@ -1,5 +1,7 @@
 - Unreal
   - <a class="GITHUB_FIX" href="/unreal/PyToolkit">PyToolkit 插件文档</a>
+- Python
+  - <a class="GITHUB_FIX" href="/Python/QBinder">QBinder 文档</a>
   <!-- - [PyToolkit 插件文档](/PyToolkit/) -->
 - 翻译
   - [编程规范](/programing/)
