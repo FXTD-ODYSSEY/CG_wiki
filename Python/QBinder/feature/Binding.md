@@ -1,6 +1,6 @@
 # 绑定变量
 
-> &emsp;&emsp;绑定变量 是 绑定容器 Binder 承载的变量类型
+> &emsp;&emsp;绑定变量 是 绑定容器 Binder 承载的变量类型      
 > &emsp;&emsp;默认直接赋值都会自动转换为 Binding 对象。
 
 ## Binding 变量绑定类

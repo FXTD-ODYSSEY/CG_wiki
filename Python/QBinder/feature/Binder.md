@@ -1,7 +1,7 @@
 
 # 绑定容器
 
-> &emsp;&emsp;Binder 是数据绑定的容器，一般用于组件。
+> &emsp;&emsp;Binder 是数据绑定的容器，一般用于组件。     
 > &emsp;&emsp;GBinder 是单例模式容器，全局实例化都是同一个对象，更方便传递数据。
 
 ## 绑定变量
@@ -19,8 +19,8 @@ print(type(state["num"]))
 
 ```
 
-> &emsp;&emsp;Binder 绑定变量声明只需要正常赋值即可。
-> &emsp;&emsp;赋值之后获取的是变量的值，但是背后存储的是 Binding 类型的实例。
+> &emsp;&emsp;Binder 绑定变量声明只需要正常赋值即可。     
+> &emsp;&emsp;赋值之后获取的是变量的值，但是背后存储的是 Binding 类型的实例。    
 > &emsp;&emsp;可以通过 字典获取的方式获取背后真正的存储对象。
 
 ## 命令方法
@@ -41,7 +41,7 @@ print(type(dumper))
 
 ```
 
-> &emsp;&emsp;实例化的 Binder 可以传入参数调用方法。
+> &emsp;&emsp;实例化的 Binder 可以传入参数调用方法。     
 > &emsp;&emsp;为了避免和绑定变量的命名冲突，传入的字符串会自动调用 BinderDispatcher 实例里的方法
 
 ## BinderDumper 数据持久化
@@ -68,7 +68,7 @@ dumper.save(path)
 dumper.load(path)
 ```
 
-> &emsp;&emsp;目前只支持了 json 数据的导入导出，后续可以开放更多数据持久化存储的 API ，方便不同的需求。
+> &emsp;&emsp;目前只支持了 json 数据的导入导出，后续可以开放更多数据持久化存储的 API ，方便不同的需求。    
 > &emsp;&emsp;dumper 也可以 json 配置导入导出，
 
 ## BinderDumper 禁用
@@ -82,7 +82,7 @@ dumper.set_auto_dump(False)
 
 ```
 
-> &emsp;&emsp;默认绑定变量如果有绑定双向数据绑定的会自动进行 dump 数据存储操作。
+> &emsp;&emsp;默认绑定变量如果有绑定双向数据绑定的会自动进行 dump 数据存储操作。     
 > &emsp;&emsp;倘若不需要可以使用 `set_auto_dump` 将这个 dumper 的自动 dump 禁用。
 
 ```python
@@ -90,6 +90,6 @@ from QBinder import constant
 constant.AUTO_DUMP = False
 ```
 
-> &emsp;&emsp;也可以使用上面的代码全局禁用 auto_dump 效果。
+> &emsp;&emsp;也可以使用上面的代码全局禁用 auto_dump 效果。     
 > &emsp;&emsp;auto_dump 不会屏蔽上面 with 语句特殊指定的 dump 。
 
