@@ -44,7 +44,7 @@ label.show()
 app.exec_()
 ```
 
-> &emsp;&emsp;QBinder 导入的时候会自动给 Qt 的特定方法注入 lambda 检测 ， 具体包括的方法可以参考 [hookconfig.py](https://github.com/FXTD-ODYSSEY/QBinder/blob/f8c778a7cd76a0cb51a890e04c3a8c2e9625e84a/QBinder/hookconfig.py)     
+> &emsp;&emsp;QBinder 导入的时候会自动给 Qt 的特定方法注入 lambda 检测 ， 具体包括的方法可以参考 [hookconfig.py](https://github.com/FXTD-ODYSSEY/QBinder/blob/master/QBinder/hookconfig.py)     
 > &emsp;&emsp;通过 lambda 函数配合绑定变量实现数据绑定。
 
 > &emsp;&emsp;数据绑定可以简化组件的操作，将更多注意点放到数据上。
