@@ -56,7 +56,7 @@ app.exec_()
 gstate.selected >> GroupBoxBind(self.StateGroup)
 ```
 
-> &emsp;&emsp;绑定 QGroupBox 下的 RadioButton 勾选的 checkbox ，将 checkbox 的名称传递到 selected 变量里。 [参考 Todo 案例](/advance/todo.md)
+> &emsp;&emsp;绑定 QGroupBox 下的 RadioButton 勾选的 checkbox ，将 checkbox 的名称传递到 selected 变量里。 [参考 Todo 案例](/example/todo.md)
 
 ## ItemConstructor 
 
@@ -103,5 +103,5 @@ gstate.todo_data >> ItemConstructor[TodoItem](
 )
 ```
 
-> &emsp;&emsp;这个使用案例 [参考 Todo 案例](/advance/todo.md)
+> &emsp;&emsp;这个使用案例 [参考 Todo 案例](/example/todo.md)
 

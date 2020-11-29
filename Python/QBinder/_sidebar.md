@@ -15,6 +15,6 @@
 
 **案例**
 
-- [表单](./exmaple/form.md)
-- [TodoMVC](./exmaple/todo.md)
-- [滑竿](./exmaple/slider.md)
+- [表单](./example/form.md)
+- [TodoMVC](./example/todo.md)
+- [滑竿](./example/slider.md)
