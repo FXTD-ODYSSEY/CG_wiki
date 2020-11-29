@@ -2,7 +2,7 @@
 
 ## 使用 Model 类
 
-```Python
+```python
 from QBinder import Binder, Model
 from Qt import QtWidgets
 

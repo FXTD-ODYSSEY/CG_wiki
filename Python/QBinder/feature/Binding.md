@@ -5,7 +5,7 @@
 
 ## Binding 变量绑定类
 
-```Python
+```python
 from __future__ import print_function
 
 # NOTE ctrl+c 暂停程序
@@ -35,7 +35,7 @@ app.exec_()
 
 ```
 
-```Python
+```python
 from QBinder import Binder
 state = Binder()
 state.text = "text"
@@ -53,7 +53,7 @@ print(state.text)
 
 ## FnBinding 函数绑定类
 
-```Python
+```python
 from QBinder import Binder , FnBinding
 
 state = Binder()
@@ -88,7 +88,7 @@ state.callback2[inst]("callback2")
 ## 继承 BinderTemplate 预设Binder
 
 
-```Python
+```python
 from QBinder import BinderTemplate
 
 class Template(BinderTemplate):

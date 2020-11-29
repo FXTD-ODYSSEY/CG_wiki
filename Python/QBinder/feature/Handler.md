@@ -4,7 +4,7 @@
 
 ## Set 
 
-```Python
+```python
 from QBinder import Binder
 from QBinder.handler import Set
 
@@ -19,7 +19,7 @@ print(state.text)
 
 > &emsp;&emsp;通过运算符重载设置 Binding 值，用来解决 lambda 不支持赋值语句的问题。
 
-```Python
+```python
 from QBinder import Binder
 from QBinder.handler import Set
 from Qt import QtWidgets
@@ -50,7 +50,7 @@ app.exec_()
 
 ## GroupBoxBind 
 
-```Python
+```python
 # 省略代码...
 # NOTE self.StateGroup 为 QGroupBox
 gstate.selected >> GroupBoxBind(self.StateGroup)
@@ -62,7 +62,7 @@ gstate.selected >> GroupBoxBind(self.StateGroup)
 
 > &emsp;&emsp;ItemConstructor 用来将 列表字典配置 数据转换为组件的构造函数 
 
-```Python
+```python
 gstate.todo_data = [
     {"text": "todo1", "completed": False},
     {"text": "todo2", "completed": True},
