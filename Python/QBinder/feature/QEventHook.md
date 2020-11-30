@@ -1,5 +1,16 @@
 # QEventHook 事件钩子
 
+> &emsp;&emsp;QEventHook 的目的是跳过重载 类的 事件方法实现普通组件的特殊事件回调。
+
+> &emsp;&emsp;比如说我们想让 Label 鼠标 Hover 状态下改变颜色。
+> &emsp;&emsp;传统方法需要写一个新的类，然后重载 QLabel 所继承的 QWidget enterEvent 实现相关的方法。
+> &emsp;&emsp;但是重新构建一个新的类很麻烦，特别是结合 Qt Designer 开发就很不方便。
+
+> &emsp;&emsp;因此我利用 Qt 的 全局 eventFilter 实现全局 event 过滤。
+> &emsp;&emsp;QEventHook 会劫持 Qt 全局的事件响应，这样不需要继承新类来实现这些特定事件。     
+
+## 使用案例
+
 ```python
 from QBinder import Binder,QEventHook
 from QBinder.handler import Set
@@ -58,15 +69,13 @@ if __name__ == "__main__":
 
 ```
 
-![model 案例](//cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/Python/QBinder/_img/feature/event_hook.gif)
+![model 案例](https://cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/Python/QBinder/_img/feature/event_hook.gif)
 
 > &emsp;&emsp;上面的案例结合 handler 和 QEventHook 可以实现更加灵活方便的组件写法。     
 > &emsp;&emsp;handler 的使用场景是通过 >> 运算符重载对 binding 进行操作。     
 > &emsp;&emsp;上面使用 Set 方法类就是用来解决 lambda 无法赋值的兼容方案。     
 > &emsp;&emsp;简单的数据操作就不需要声明冗余的函数     
 
-> &emsp;&emsp;QEventHook 会劫持 Qt 全局的事件响应，这样不需要继承组件来实现。     
-> &emsp;&emsp;可以通过我的 劫持 钩子来直接扩展组件的行为响应。     
 > &emsp;&emsp;QEventHook 使用单例模式，无论在哪里实例化都只获取同一个实例。(避免多重劫持导致性能下降)     
 
 > &emsp;&emsp;QEventHook 支持两种写法 `add_hook` 或者 `>> 运算符` 。     
@@ -74,3 +83,71 @@ if __name__ == "__main__":
 > &emsp;&emsp;事件绑定上支持 QEvent 和 字符串 两种写法。     
 
 > &emsp;&emsp;支持的事件参考 Qt QEvent 文档 [链接](https://doc.qt.io/qtforpython/PySide2/QtCore/QEvent.html#PySide2.QtCore.PySide2.QtCore.QEvent.Type)
+
+## 回调函数 参数自动填充
+
+```Python
+from QBinder import QEventHook
+
+from Qt import QtWidgets
+from Qt import QtCore
+from Qt import QtGui
+
+event_hook = QEventHook()
+
+app = QtWidgets.QApplication([])
+
+label = QtWidgets.QLabel("display")
+label.show()
+
+# NOTE 扩展 label 为可点击组件
+
+# NOTE 可不接受参数或者接受 event 参数
+label >> event_hook("MouseButtonPress",lambda:print("clicked"))
+label >> event_hook("MouseButtonPress",lambda event:print("clicked",event))
+
+app.exec_()
+```
+
+![model 案例](https://cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/Python/QBinder/_img/feature/event_hook2.gif)
+
+> &emsp;&emsp;这里传入的 lambda 同时支持没有参数和一个参数。
+> &emsp;&emsp;如果填入了一个参数，传入的是 hook 组件说接受到的 Event ，方便特定函数获取 event 的数据来进行特殊操作。
+
+## 逆向事件过滤
+
+```Python
+from QBinder import QEventHook
+
+from Qt import QtWidgets
+from Qt import QtCore
+from Qt import QtGui
+
+event_hook = QEventHook()
+
+app = QtWidgets.QApplication([])
+
+label = QtWidgets.QLabel("display")
+label.show()
+modal = QtWidgets.QWidget()
+modal.show()
+
+# NOTE 点击外部组件隐藏窗口
+modal >> ~event_hook("MouseButtonPress",lambda:modal.hide())
+
+app.exec_()
+```
+
+> &emsp;&emsp;QEventHook 还提供了逆向事件过滤， 在实例对象前添加 ~ 运算符即可。
+> &emsp;&emsp;也就是判断条件调整为除了 传入的组件意外的所有组件均进行触发。
+> &emsp;&emsp;比如要做一个 Modal 模态窗口，可以点击外部任意区域来隐藏自身。 (更简单的方法是 setWindowFlag(QtCore.Qt.Popup) )
+
+
+## 注意事项
+
+```Python
+# ! 传入 Qt 事件会报错
+modal >> event_hook("MouseButtonPress",modal.hide)
+```
+
+> &emsp;&emsp;为了判断函数可以传入的参数， hook 的回调函数 只支持 Python 函数 ， 不支持 Qt 函数传入。 传入会直接触发报错。
