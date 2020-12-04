@@ -142,6 +142,7 @@ app.exec_()
 > &emsp;&emsp;也就是判断条件调整为除了 传入的组件意外的所有组件均进行触发。
 > &emsp;&emsp;比如要做一个 Modal 模态窗口，可以点击外部任意区域来隐藏自身。 (更简单的方法是 setWindowFlag(QtCore.Qt.Popup) )
 
+> 注意: 逆向事件过滤接受 `reciever` `event` 两个参数，按顺序传入。
 
 ## 注意事项
 
@@ -151,3 +152,9 @@ modal >> event_hook("MouseButtonPress",modal.hide)
 ```
 
 > &emsp;&emsp;为了判断函数可以传入的参数， hook 的回调函数 只支持 Python 函数 ， 不支持 Qt 函数传入。 传入会直接触发报错。
+
+---
+
+> &emsp;&emsp;文件拖拽支持需要注意 `dragEnterEvent` 和 `dragMoveEvent` 必须使用虚函数重载。
+> &emsp;&emsp;利用 QEventHook 劫持不起作用，详情可以参考 [dragDropTest.py](https://github.com/FXTD-ODYSSEY/QBinder/blob/master/test/dragdropTest.py) 测试脚本。
+
