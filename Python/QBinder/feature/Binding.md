@@ -53,8 +53,7 @@ print(state.text)
 # NOTE 打印 `QBinder`
 ```
 
-> &emsp;&emsp;使用 binding 的赋值语句比使用 set 方法要好，因为 set 方法只触发 QBinder 数据绑定的更新。
-> &emsp;&emsp;赋值语句还会触发 model 的更新，因此不推荐是用 set 方法
+> &emsp;&emsp; binding 的赋值语句 等价于使用 set 方法更新，只是赋值语句可以处理 binding 不存在的情况。
 
 ## 数据双向绑定
 
@@ -90,8 +89,8 @@ widget.show()
 app.exec_()
 ```
 
-> &emsp;&emsp;双向数据绑定是借助 Qt 的 meta 机制实现的。
-> &emsp;&emsp;具体囊括的函数可以参照这个 [链接](https://github.com/FXTD-ODYSSEY/QBinder/blob/e6478b3e27e1655463ef2415d5a8c747d222c9f9/research/test_qt_meta.json)
+> &emsp;&emsp;双向数据绑定是借助 Qt 的 meta 机制实现的。    
+> &emsp;&emsp;具体囊括的函数可以参照这个 [链接](https://github.com/FXTD-ODYSSEY/QBinder/blob/e6478b3e27e1655463ef2415d5a8c747d222c9f9/research/test_qt_meta.json)    
 > &emsp;&emsp;json 里面包含 updater 的部分就是支持双向数据绑定。
 
 > &emsp;&emsp;如果不想双向数据绑定的话，可以改为 `edit.setText(lambda: state.text * 1)` 的方法，只要有运算就不会自动双向绑定了。

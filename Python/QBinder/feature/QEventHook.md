@@ -1,12 +1,12 @@
 # QEventHook 事件钩子
 
-> &emsp;&emsp;QEventHook 的目的是跳过重载 类的 事件方法实现普通组件的特殊事件回调。
+> &emsp;&emsp;QEventHook 的目的是跳过重载 类的 事件方法实现普通组件的特殊事件回调。  
 
-> &emsp;&emsp;比如说我们想让 Label 鼠标 Hover 状态下改变颜色。
-> &emsp;&emsp;传统方法需要写一个新的类，然后重载 QLabel 所继承的 QWidget enterEvent 实现相关的方法。
-> &emsp;&emsp;但是重新构建一个新的类很麻烦，特别是结合 Qt Designer 开发就很不方便。
+> &emsp;&emsp;比如说我们想让 Label 鼠标 Hover 状态下改变颜色。      
+> &emsp;&emsp;传统方法需要写一个新的类，然后重载 QLabel 所继承的 QWidget enterEvent 实现相关的方法。     
+> &emsp;&emsp;但是重新构建一个新的类很麻烦，特别是结合 Qt Designer 开发就很不方便。 
 
-> &emsp;&emsp;因此我利用 Qt 的 全局 eventFilter 实现全局 event 过滤。
+> &emsp;&emsp;因此我利用 Qt 的 全局 eventFilter 实现全局 event 过滤。     
 > &emsp;&emsp;QEventHook 会劫持 Qt 全局的事件响应，这样不需要继承新类来实现这些特定事件。     
 
 ## 使用案例
@@ -111,7 +111,7 @@ app.exec_()
 
 ![model 案例](https://cdn.jsdelivr.net/gh/FXTD-ODYSSEY/CG_wiki@gh-pages/Python/QBinder/_img/feature/event_hook2.gif)
 
-> &emsp;&emsp;这里传入的 lambda 同时支持没有参数和一个参数。
+> &emsp;&emsp;这里传入的 lambda 同时支持没有参数和一个参数。    
 > &emsp;&emsp;如果填入了一个参数，传入的是 hook 组件说接受到的 Event ，方便特定函数获取 event 的数据来进行特殊操作。
 
 ## 逆向事件过滤
@@ -138,8 +138,8 @@ modal >> ~event_hook("MouseButtonPress",lambda:modal.hide())
 app.exec_()
 ```
 
-> &emsp;&emsp;QEventHook 还提供了逆向事件过滤， 在实例对象前添加 ~ 运算符即可。
-> &emsp;&emsp;也就是判断条件调整为除了 传入的组件意外的所有组件均进行触发。
+> &emsp;&emsp;QEventHook 还提供了逆向事件过滤， 在实例对象前添加 ~ 运算符即可。     
+> &emsp;&emsp;也就是判断条件调整为除了 传入的组件意外的所有组件均进行触发。      
 > &emsp;&emsp;比如要做一个 Modal 模态窗口，可以点击外部任意区域来隐藏自身。 (更简单的方法是 setWindowFlag(QtCore.Qt.Popup) )
 
 > 注意: 逆向事件过滤接受 `reciever` `event` 两个参数，按顺序传入。
@@ -155,6 +155,6 @@ modal >> event_hook("MouseButtonPress",modal.hide)
 
 ---
 
-> &emsp;&emsp;文件拖拽支持需要注意 `dragEnterEvent` 和 `dragMoveEvent` 必须使用虚函数重载。
+> &emsp;&emsp;文件拖拽支持需要注意 `dragEnterEvent` 和 `dragMoveEvent` 必须使用虚函数重载。    
 > &emsp;&emsp;利用 QEventHook 劫持不起作用，详情可以参考 [dragDropTest.py](https://github.com/FXTD-ODYSSEY/QBinder/blob/master/test/dragdropTest.py) 测试脚本。
 
