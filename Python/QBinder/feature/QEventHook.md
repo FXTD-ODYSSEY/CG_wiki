@@ -1,5 +1,7 @@
 # QEventHook 事件钩子
 
+> **注意 QBinder 1.0.6 版本之后** QEventHook 需要通过 `instance()` 获取实例
+
 > &emsp;&emsp;QEventHook 的目的是跳过重载 类的 事件方法实现普通组件的特殊事件回调。  
 
 > &emsp;&emsp;比如说我们想让 Label 鼠标 Hover 状态下改变颜色。      
@@ -20,7 +22,7 @@ from Qt import QtCore
 from Qt import QtGui
 
 # NOTE event_hook 使用单例模式
-event_hook = QEventHook()
+event_hook = QEventHook.instance()
 
 class WidgetTest(QtWidgets.QWidget):
     state = Binder()
@@ -82,7 +84,7 @@ if __name__ == "__main__":
 > &emsp;&emsp;>> 运算符重载的写法更加简洁，只是如果前面的组件有重载 \_\_rshift__ 运算符会导致出错。     
 > &emsp;&emsp;事件绑定上支持 QEvent 和 字符串 两种写法。     
 
-> &emsp;&emsp;支持的事件参考 Qt QEvent 文档 [链接](https://doc.qt.io/qtforpython/PySide2/QtCore/QEvent.html#PySide2.QtCore.PySide2.QtCore.QEvent.Type)
+> &emsp;&emsp;支持的事件参考 Qt QEvent 文档 [链接](https://doc.qt.io/qtforpython/PySide6/QtCore/QEvent.html#PySide6.QtCore.PySide6.QtCore.QEvent.Type)
 
 ## 回调函数 参数自动填充
 
@@ -93,7 +95,7 @@ from Qt import QtWidgets
 from Qt import QtCore
 from Qt import QtGui
 
-event_hook = QEventHook()
+event_hook = QEventHook.instance()
 
 app = QtWidgets.QApplication([])
 
@@ -123,7 +125,7 @@ from Qt import QtWidgets
 from Qt import QtCore
 from Qt import QtGui
 
-event_hook = QEventHook()
+event_hook = QEventHook.instance()
 
 app = QtWidgets.QApplication([])
 
